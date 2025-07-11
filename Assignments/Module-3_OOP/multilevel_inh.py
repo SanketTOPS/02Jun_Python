@@ -36,7 +36,8 @@ class tops(darshan):
         print("Darshan's Subject:",self.dsub)
 
 
-tops.s_getdata()
-tops.a_getdata()
-tops.d_getdata()
-tops.printdata()
+tp=tops()
+tp.s_getdata()
+tp.a_getdata()
+tp.d_getdata()
+tp.printdata()
