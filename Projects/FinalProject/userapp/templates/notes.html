@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Submission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-lg">
+        <!-- Header -->
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">
+            Submit Your Notes
+        </h2>
+
+        <!-- Form -->
+        <form action="#" method="POST" enctype="multipart/form-data" class="space-y-5">
+
+            {% csrf_token %}
+
+            <!-- Notes Title -->
+            <div>
+                <label for="title" class="block text-gray-700 font-medium mb-1">Notes Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter notes title"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
+                    required />
+            </div>
+
+            <!-- Notes Description -->
+            <div>
+                <label for="description" class="block text-gray-700 font-medium mb-1">Notes Description</label>
+                <textarea id="description" name="desc" rows="4" placeholder="Enter notes description"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
+                    required></textarea>
+            </div>
+
+            <!-- Notes File Upload -->
+            <div>
+                <label for="file" class="block text-gray-700 font-medium mb-1">Upload File</label>
+                <input type="file" id="file" name="files" class="w-full text-gray-700 file:mr-4 file:py-2 file:px-4 
+          file:rounded-lg file:border-0 
+          file:text-sm file:font-semibold
+          file:bg-indigo-500 file:text-white
+          hover:file:bg-indigo-600 cursor-pointer" required />
+            </div>
+
+            <!-- Notes Category -->
+            <div>
+                <label for="category" class="block text-gray-700 font-medium mb-1">Notes Category</label>
+                <select id="category" name="cate"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
+                    required>
+                    <option value="">Select category</option>
+                    <option value="programming">Programming</option>
+                    <option value="database">Database</option>
+                    <option value="web">Web Development</option>
+                    <option value="networking">Networking</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:opacity-90 transition">
+                Submit Notes
+            </button>
+        </form>
+
+        <!-- Footer -->
+        <p class="text-sm text-center text-gray-600 mt-6">
+            Want to check submissions?
+            <a href="notes.html" class="text-indigo-500 hover:underline">View Notes</a>
+        </p>
+    </div>
+</body>
+
+</html>
