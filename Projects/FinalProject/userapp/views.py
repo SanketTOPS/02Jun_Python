@@ -9,21 +9,24 @@ def index(request):
     return render(request,'index.html',{'user':user})
 
 def notes(request):
-    user=request.session.get("user")
-    username=UserSignup.objects.get(email=user)
-    if request.method=='POST':
-        form=NotesForm(request.POST,request.FILES)
-        if form.is_valid():
-            x=form.save(commit=False)
-            x.status="Pending"
-            x.email=username
-            x.save()
-            print("Notes Subitted!")
-            return redirect("/")
+    try:
+        user=request.session.get("user")
+        username=UserSignup.objects.get(email=user)
+        if request.method=='POST':
+            form=NotesForm(request.POST,request.FILES)
+            if form.is_valid():
+                x=form.save(commit=False)
+                x.status="Pending"
+                x.email=username
+                x.save()
+                print("Notes Subitted!")
+                return redirect("/")
 
-        else:
-            print(form.errors)
-    return render(request,'notes.html')
+            else:
+                print(form.errors)
+    except:
+        print("Error")
+    return render(request,'notes.html',{'user':user})
 
 def about(request):
     return render(request,'about.html')
