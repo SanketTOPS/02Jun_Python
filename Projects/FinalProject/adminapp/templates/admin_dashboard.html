@@ -26,7 +26,8 @@
                 <span>👥</span> Users
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
+            <a href="/adminapp/admin_notesdata"
+                class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
                 <span>📄</span> Notes
             </a>
 
@@ -68,31 +69,25 @@
         <!-- Recent Activities -->
         <section class="px-6 pb-6">
             <div class="bg-white rounded-xl shadow-md p-5 mt-4">
-                <h3 class="text-lg font-semibold text-gray-700 mb-4">Recent Activities</h3>
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Active User</h3>
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="bg-indigo-50 text-indigo-800 text-sm">
-                            <th class="py-2 px-4">User</th>
-                            <th class="py-2 px-4">Activity</th>
-                            <th class="py-2 px-4">Date</th>
+                            <th class="py-2 px-4">Fullname</th>
+                            <th class="py-2 px-4">Email</th>
+                            <th class="py-2 px-4">Mobile</th>
+                            <th class="py-2 px-4">Created At</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for i in data %}
                         <tr class="border-t text-sm text-gray-700">
-                            <td class="py-2 px-4">John Doe</td>
-                            <td class="py-2 px-4">Uploaded new note</td>
-                            <td class="py-2 px-4">08 Oct 2025</td>
+                            <td class="py-2 px-4">{{i.fullname}}</td>
+                            <td class="py-2 px-4">{{i.email}}</td>
+                            <td class="py-2 px-4">{{i.mobile}}</td>
+                            <td class="py-2 px-4">{{i.created_at}}</td>
                         </tr>
-                        <tr class="border-t text-sm text-gray-700">
-                            <td class="py-2 px-4">Priya Sharma</td>
-                            <td class="py-2 px-4">Updated category</td>
-                            <td class="py-2 px-4">07 Oct 2025</td>
-                        </tr>
-                        <tr class="border-t text-sm text-gray-700">
-                            <td class="py-2 px-4">Rahul Patel</td>
-                            <td class="py-2 px-4">Created new user</td>
-                            <td class="py-2 px-4">06 Oct 2025</td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>

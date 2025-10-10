@@ -19,8 +19,12 @@ def admin_dashboard(request):
     n_data=Mynotes.objects.all()
     n=data.count()
     nd=n_data.count()
-    return render(request,'admin_dashboard.html',{'n':n,'nd':nd})
+    return render(request,'admin_dashboard.html',{'n':n,'nd':nd,'data':data})
 
 def admin_userdata(request):
     data=UserSignup.objects.all()
     return render(request,'admin_userdata.html',{'data':data})
+
+def admin_notesdata(request):
+    data=Mynotes.objects.all()
+    return render(request,'admin_notesdata.html',{'data':data})
