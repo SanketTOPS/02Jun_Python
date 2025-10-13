@@ -5,7 +5,7 @@ from django.db import models
 class UserSignup(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     fullname=models.CharField(max_length=100)
-    email=models.EmailField()
+    email=models.EmailField(unique=True)
     password=models.CharField(max_length=15)
     mobile=models.BigIntegerField()
     

@@ -1,6 +1,9 @@
 from django.shortcuts import render,redirect
 from .forms import *
 from django.contrib.auth import logout
+from django.core.mail import send_mail
+import random
+from FinalProject import settings
 
 # Create your views here.
 
@@ -66,17 +69,36 @@ def signin(request):
     return render(request,'signin.html')
 
 def signup(request):
+    msg=""
     if request.method=='POST':
-        form=SignupForm(request.POST)
-        if form.is_valid():
-            form.save()
-            print("Signup Successfully!")
-            return redirect("signin")
+        email=request.POST["email"]
+        user=UserSignup.objects.filter(email=email)
+        if user:
+            msg="This email address is already exists!"
         else:
-            print(form.errors)
-    return render(request,'signup.html')
+            form=SignupForm(request.POST)
+            if form.is_valid():
+                form.save()
+                print("Signup Successfully!")
+                
+                #Email Sending code
+                otp=random.randint(11111,99999)
+                send_mail(subject="Your OTP",message=f'''Dear User!\n\n
+                          Thanks for using our service!\n
+                          For account verification your one time password is\n\n
+                          {otp}.\n\n
+                          Thanks & Regrads\n
+                          NotesApp Team\n
+                          +91 9724799469 | sanket.tops@gmail.com''',from_email=settings.EMAIL_HOST_USER,recipient_list=[request.POST["email"]])
+                print("Email sent successfully!")
+                return redirect("otpverify")
+            else:
+                print(form.errors)
+    return render(request,'signup.html',{'msg':msg})
 
 def userlogout(request):
     logout(request)
     return redirect('signin')
     
+def otpverify(request):
+    return render(request,'otpverify.html')

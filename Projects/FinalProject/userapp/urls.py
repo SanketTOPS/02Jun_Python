@@ -11,5 +11,6 @@ urlpatterns = [
     path('signin/',views.signin,name='signin'),
     path('signup/',views.signup,name='signup'),
     path('userlogout/',views.userlogout,name='userlogout'),
+    path('otpverify/',views.otpverify,name='otpverify'),
     
 ]
