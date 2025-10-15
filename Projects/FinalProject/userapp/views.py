@@ -35,6 +35,14 @@ def about(request):
     return render(request,'about.html')
 
 def contact(request):
+    if request.method=='POST':
+        form=ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            print("Form has been submitted!")
+            return redirect('contact')
+        else:
+            print(form.errors)
     return render(request,'contact.html')
 
 def profile(request):
@@ -68,6 +76,7 @@ def signin(request):
             print("Error!Login Faild...")
     return render(request,'signin.html')
 
+otp=0
 def signup(request):
     msg=""
     if request.method=='POST':
@@ -82,6 +91,7 @@ def signup(request):
                 print("Signup Successfully!")
                 
                 #Email Sending code
+                global otp
                 otp=random.randint(11111,99999)
                 send_mail(subject="Your OTP",message=f'''Dear User!\n\n
                           Thanks for using our service!\n
@@ -101,4 +111,14 @@ def userlogout(request):
     return redirect('signin')
     
 def otpverify(request):
-    return render(request,'otpverify.html')
+    msg=""
+    global otp
+    print(otp)
+    if request.method=="POST":
+        if int(request.POST["otp"])==otp:
+            print("Verification Success!")
+            return redirect('signin')
+        else:
+            print("Error!OTP Verification faild...")
+            msg="OTP Verification faild...Try again!"
+    return render(request,'otpverify.html',{'msg':msg})

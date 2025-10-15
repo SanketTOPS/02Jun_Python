@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Your Company</title>
+    <meta name="description" content="About Us — mission, story, team and contact." />
+
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* small utility for subtle card border */
+        .glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 via-white to-slate-100 text-slate-800 antialiased">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="/static/images/notesapp_logo.png" alt="Logo" class="w-8 h-8">
+                <span class="font-semibold text-lg">NotesApp</span>
+            </a>
+            <div class="space-x-4">
+                <a href="/" class="hover:text-indigo-400">Home</a>
+                <a href="/notes" class="hover:text-indigo-400">Notes</a>
+                <a href="/about" class="hover:text-indigo-400">About</a>
+                <a href="/contact" class="hover:text-indigo-400 font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Hero -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">We build products people love</h2>
+                <p class="mt-4 text-slate-600">At <span class="font-semibold">Your Company</span> we focus on creating
+                    simple, usable and delightful digital experiences. Founded on a belief that technology should make
+                    life easier, not more complicated.</p>
+
+                <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="mt-1 h-8 w-8 flex items-center justify-center rounded-md bg-indigo-50 text-indigo-600">
+                            ✓</div>
+                        <div>
+                            <p class="font-medium">Human-centered design</p>
+                            <p class="text-sm text-slate-500">We start with users and iterate fast.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div
+                            class="mt-1 h-8 w-8 flex items-center justify-center rounded-md bg-indigo-50 text-indigo-600">
+                            ⚡</div>
+                        <div>
+                            <p class="font-medium">Performance-first</p>
+                            <p class="text-sm text-slate-500">Fast, reliable, and accessible products.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="mt-6 flex gap-3">
+                    <a href="/contact"
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-indigo-600 text-white font-medium hover:bg-indigo-700">Get
+                        in touch</a>
+                    <a href="/services"
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-50">Our
+                        services</a>
+                </div>
+            </div>
+
+            <div class="order-first md:order-last">
+                <div class="rounded-2xl shadow-md overflow-hidden glass p-6">
+                    <h3 class="text-lg font-semibold">Our mission</h3>
+                    <p class="mt-3 text-slate-600">To empower small teams and enterprises to ship software that matters
+                        — with clarity, speed and joy.</p>
+
+                    <dl class="mt-6 grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white rounded-lg border">
+                            <dt class="text-xs text-slate-500">Founded</dt>
+                            <dd class="font-medium">2019</dd>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg border">
+                            <dt class="text-xs text-slate-500">Clients</dt>
+                            <dd class="font-medium">250+</dd>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg border">
+                            <dt class="text-xs text-slate-500">Offices</dt>
+                            <dd class="font-medium">Rajkot, India</dd>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg border">
+                            <dt class="text-xs text-slate-500">Team</dt>
+                            <dd class="font-medium">40+</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story / Timeline -->
+        <section class="mt-12">
+            <h3 class="text-2xl font-semibold">Our story</h3>
+            <p class="mt-2 text-slate-600 max-w-3xl">What started as a small workshop grew into a product-first studio
+                focused on helping local businesses digitize and scale. We combine design, engineering and strategy to
+                solve real problems.</p>
+
+            <div class="mt-6 space-y-4">
+                <div class="flex items-start gap-4">
+                    <div class="h-8 w-8 rounded-full bg-indigo-600 text-white flex items-center justify-center">1</div>
+                    <div>
+                        <p class="font-medium">2019 — Founded</p>
+                        <p class="text-sm text-slate-500">Small team of 4 developers building websites and simple apps
+                            for local customers.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="h-8 w-8 rounded-full bg-indigo-600 text-white flex items-center justify-center">2</div>
+                    <div>
+                        <p class="font-medium">2021 — First SaaS launch</p>
+                        <p class="text-sm text-slate-500">Launched our first product and began onboarding paying
+                            customers worldwide.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="h-8 w-8 rounded-full bg-indigo-600 text-white flex items-center justify-center">3</div>
+                    <div>
+                        <p class="font-medium">2024 — Growth</p>
+                        <p class="text-sm text-slate-500">Expanded the team and started focusing on education and
+                            training programs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="mt-12">
+            <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-semibold">Meet the team</h3>
+                <a href="/careers" class="text-sm text-indigo-600">We're hiring →</a>
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Card template for team member -->
+                <article class="bg-white rounded-xl p-4 shadow-sm border">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="h-14 w-14 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-semibold">
+                            SC</div>
+                        <div>
+                            <h4 class="font-medium">Sanket Chauhan</h4>
+                            <p class="text-sm text-slate-500">Founder &amp; Lead Trainer</p>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-slate-600">Passionate about building learning experiences and simple
+                        tools that help students start careers in tech.</p>
+                </article>
+
+                <article class="bg-white rounded-xl p-4 shadow-sm border">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="h-14 w-14 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-semibold">
+                            AR</div>
+                        <div>
+                            <h4 class="font-medium">Asha R.</h4>
+                            <p class="text-sm text-slate-500">Product Designer</p>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-slate-600">Designs intuitive interfaces focused on accessibility and
+                        user empathy.</p>
+                </article>
+
+                <article class="bg-white rounded-xl p-4 shadow-sm border">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="h-14 w-14 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-semibold">
+                            KM</div>
+                        <div>
+                            <h4 class="font-medium">Kamal M.</h4>
+                            <p class="text-sm text-slate-500">Senior Engineer</p>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-slate-600">Builds scalable systems and mentors junior engineers in best
+                        practices.</p>
+                </article>
+
+                <article class="bg-white rounded-xl p-4 shadow-sm border">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="h-14 w-14 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-semibold">
+                            RP</div>
+                        <div>
+                            <h4 class="font-medium">Rita P.</h4>
+                            <p class="text-sm text-slate-500">Customer Success</p>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-slate-600">Helps customers get the most value and smooth onboarding
+                        experience.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ + CTA -->
+        <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold">Frequently asked questions</h3>
+                <div class="mt-4 space-y-3">
+                    <details class="p-4 rounded-lg bg-white border">
+                        <summary class="font-medium cursor-pointer">What services do you offer?</summary>
+                        <p class="mt-2 text-sm text-slate-600">We offer web &amp; mobile development, product design,
+                            training workshops and SaaS solutions.</p>
+                    </details>
+
+                    <details class="p-4 rounded-lg bg-white border">
+                        <summary class="font-medium cursor-pointer">Where are you located?</summary>
+                        <p class="mt-2 text-sm text-slate-600">Our headquarters are in Rajkot, India, and we work with
+                            remote clients worldwide.</p>
+                    </details>
+
+                    <details class="p-4 rounded-lg bg-white border">
+                        <summary class="font-medium cursor-pointer">Do you offer training?</summary>
+                        <p class="mt-2 text-sm text-slate-600">Yes — we run regular short courses and corporate
+                            workshops on web development, Python and digital marketing.</p>
+                    </details>
+                </div>
+            </div>
+
+            <aside class="bg-indigo-600 text-white rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <h4 class="text-xl font-semibold">Want to work with us?</h4>
+                    <p class="mt-2 text-sm opacity-90">Tell us about your project and we'll reply within 2 business
+                        days.</p>
+
+                    <ul class="mt-4 text-sm space-y-2">
+                        <li>• Free consultation</li>
+                        <li>• Dedicated support</li>
+                        <li>• Flexible engagement</li>
+                    </ul>
+                </div>
+
+                <div class="mt-6">
+                    <a href="/contact"
+                        class="block w-full text-center px-4 py-2 rounded-md bg-white text-indigo-600 font-semibold">Start
+                        a conversation</a>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 border-t py-8">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-500">© <span id="year"></span> Your Company. All rights reserved.</p>
+                <div class="flex items-center gap-4 text-sm">
+                    <a href="/privacy" class="text-slate-600 hover:text-indigo-600">Privacy</a>
+                    <a href="/terms" class="text-slate-600 hover:text-indigo-600">Terms</a>
+                    <a href="/contact" class="text-slate-600 hover:text-indigo-600">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // small script for year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
