@@ -63,10 +63,10 @@
                         <td class="py-3 px-6">{{i.status}}</td>
                         <td class="py-3 px-6">{{i.updated_at}}</td>
                         <td class="py-3 px-6 text-center space-x-2">
-                            <button
-                                class="bg-blue-500 hover:bg-blue-400 text-white px-3 py-1 rounded text-xs">Approve</button>
-                            <button
-                                class="bg-red-500 hover:bg-red-400 text-white px-3 py-1 rounded text-xs">Reject</button>
+                            <a href="/adminapp/notes_approve/{{i.id}}"
+                                class="bg-blue-500 hover:bg-blue-400 text-white px-3 py-1 rounded text-xs">Approve</a>
+                            <a href="/adminapp/notes_reject/{{i.id}}"
+                                class="bg-red-500 hover:bg-red-400 text-white px-3 py-1 rounded text-xs">Reject</a>
                         </td>
                     </tr>
                     {% endfor %}
